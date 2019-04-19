@@ -172,11 +172,8 @@ class ExoQuant
         {
             var r = pData[i * 4 + 0], g = pData[i * 4 + 1], 
                 b = pData[i * 4 + 2], a = pData[i * 4 + 3];
-
-            //console.log("r = " + r + ", g = " + g + ", b = " + b + ", a = " + a);
+            
             var hash = this.MakeHash(this.ToRGBA(r, g, b, a));
-            //console.log("rgba = " + this.ToRGBA(r, g, b, a).toString(16));
-            //console.log("hash = " + hash.toString(16));
 
             var pCur = this.pExq.pHash[hash];
 
@@ -243,9 +240,7 @@ class ExoQuant
                     pCur.pNext = this.pExq.node[0].pHistogram;
                     this.pExq.node[0].pHistogram = pCur;
                 }
-            console.log(this.pExq.node[0]);
             this.SumNode(this.pExq.node[0]);
-            console.log(this.pExq.node[0]);
             this.pExq.numColors = 1;
         }
         
@@ -280,7 +275,6 @@ class ExoQuant
                 pCur = pNext;
             }
             
-            console.log(i + " besti = " + besti);
             this.SumNode(this.pExq.node[besti]);
             this.SumNode(this.pExq.node[i]);
 
@@ -797,15 +791,4 @@ class ExoQuant
             pHist.color.b * _EXQ_sortDir.b + 
             pHist.color.a * _EXQ_sortDir.a;
     }
-    
-    
-    
 }
-
-
-
-
-
-
-
-
