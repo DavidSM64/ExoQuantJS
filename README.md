@@ -9,6 +9,9 @@ ExoQuant is a high-quality, easy to use color quantization library. This is for 
 * Creation of a shared palette for more than one image (or mipmap level)
 * Dithering of the reduced image with very little noise
 
+Other versions:\
+C# - https://github.com/DavidSM64/ExoQuantSharp
+
 ## Usage:
 
 First, of course, you need to import the library:
